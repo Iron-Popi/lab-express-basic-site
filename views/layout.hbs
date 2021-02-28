@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My app</title>
     <link rel="stylesheet" href="css/styles.css">
+    {{#each css}}
+    <link rel="stylesheet" href="css/{{this}}.css">
+    {{/each}}
+    {{#each js}}
+    <script type="module" src="js/{{this}}.js"></script>
+    {{/each}}
 </head>
 <body>
     <header>

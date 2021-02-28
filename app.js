@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(__dirname + "/public"))
 app.set("views", __dirname + "/views");
 app.set("view engine","hbs");
-
+hbs.registerPartials(__dirname + "/views/partials");
 
 app.get("/", (request, response) => {
     response.render("home");
@@ -17,7 +17,10 @@ app.get("/about", (request, response) => {
 });
 
 app.get("/works", (request, response) => {
-    response.render("works");
+    response.render("works", {
+      css: ["home", "gallery"],
+      js: ["gallery"]
+    });
 });
 
 app.get("*", (request, response) => {
@@ -25,6 +28,6 @@ app.get("*", (request, response) => {
 });
 
 
-app.listen(3000, () => {
-    console.log("server is ready at @ http://localhost:3000");
+app.listen(4000, () => {
+    console.log("server is ready at @ http://localhost:4000");
 });
