@@ -1,0 +1,30 @@
+<h2>Change something</h2>
+<br>
+
+<div>
+ {{!-- enctype="multipart/form-data" --}}
+<form method="post" action="/cosplay/edit/{{editedCosplay._id}}" class="form">
+    <label for="name">Character name</label>
+        <br>
+    <input class="input" type="text" id="name" name="name" value="{{editedCosplay.name}}">
+        <br>
+    <label for="universe">Game/anime/universe</label>
+        <br>
+    <input id="universe" class="input" type="text" name="universe" value="{{editedCosplay.universe}}">
+        <br>
+    {{!-- <label for="image" class="label">Add a picture maybe?</label>
+        <br>
+    <input type="file" name="image" id="image" /> --}}
+    <label for="inProgress">Made some progress?</label>
+        <br>
+    <select id="inProgress" name="inProgress">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+    </select>
+        <br>
+    <button class="btn">Send</button>
+</form>
+</div>
+
+<a href="/cosplay"> <button>I changed my mind</button> </a>
+

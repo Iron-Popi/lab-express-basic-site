@@ -1,0 +1,27 @@
+<h1>Choose your character</h1>
+
+<div class="div-form">
+ {{!-- enctype="multipart/form-data" --}}
+<form method="post" action="/cosplay/new" class="form">
+    <label for="name">Character name</label>
+        <br>
+    <input class="input" type="text" id="name" name="name" placeholder="your favorite character here">
+        <br>
+    <label for="universe">Game/anime/universe</label>
+        <br>
+    <input id="universe" class="input" type="text" name="universe" placeholder="where does this character come from?">
+        <br>
+    {{!-- <label for="image" class="label">Add a picture maybe?</label>
+        <br>
+    <input type="file" name="image" id="image" /> --}}
+    <label for="inProgress">Have you started already?</label>
+        <br>
+    <select id="inProgress" name="inProgress">
+        <option value="no">no</option>
+        <option value="yes">yes</option>
+    </select>
+        <br>
+    <button class="btn">Send</button>
+</form>
+</div>
+
